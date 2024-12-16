@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喝胡辣汤</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff9900;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #cc7a00;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="soupImage" src="" alt="胡辣汤" style="display:none;">
+        <button onclick="drinkHotSourSoup()">喝胡辣汤</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function drinkHotSourSoup() {
+            count++;
+            var image = document.getElementById('soupImage');
+            // 替换为你的本地图片路径或在线图片URL
+            image.src = 'https://via.placeholder.com/400x300?text=1.jpg';
+            image.style.display = 'block';
+
+            var message = document.getElementById('message');
+            message.textContent = `好烫好喝，第${count}碗胡辣汤`;
+        }
+    </script>
+</body>
+</html>
